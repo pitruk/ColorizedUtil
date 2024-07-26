@@ -10,7 +10,7 @@ Add the following dependency to your `pom.xml`:
 
 ```xml
 <dependency>
-    <groupId>pl.pitruk</groupId>
-    <artifactId>colorizedchat</artifactId>
-    <version>1.0.0</version>
+  <groupId>io.github.pitruk</groupId>
+  <artifactId>colorizedutil</artifactId>
+  <version>1.0.0</version>
 </dependency>
