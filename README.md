@@ -39,7 +39,7 @@ import pl.pitruk.colorized.ChatUtil;
 public class Example {
     public static void main(String[] args) {
         String message = "Hello &#D22AD2world &1and &2everyone&c!";
-        String translatedMessage = ChatUtil.colorize(message);
+        String translatedMessage = ColorUtil.colorize(message);
         System.out.println(translatedMessage);
     }
 }
@@ -53,7 +53,7 @@ You can use ColorizedUtil to create colorful and dynamic messages for your Minec
 
     ```java
     String message = "Welcome to the server &#00FF00Green &#FF0000Red &#0000FFBlue!";
-    String translatedMessage = ChatUtil.colorize(message);
+    String translatedMessage = ColorUtil.colorize(message);
     // Outputs: Welcome to the server with the words Green, Red, and Blue in their respective colors
     ```
 
@@ -69,7 +69,7 @@ You can use ColorizedUtil to create colorful and dynamic messages for your Minec
 
     ```java
     String message = "<gradient:FF0000:0000FF>Gradient Text</gradient>";
-    String translatedMessage = ChatUtil.colorize(message);
+    String translatedMessage = ColorUtil.colorize(message);
     // Outputs: Gradient Text with a smooth transition from red to blue
     ```
 
