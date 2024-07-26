@@ -61,7 +61,7 @@ You can use ColorizedUtil to create colorful and dynamic messages for your Minec
 
     ```java
     String message = "This is &1dark blue, &2dark green, and &ccrimson!";
-    String translatedMessage = ChatUtil.colorize(message);
+    String translatedMessage = ColorUtil.colorize(message);
     // Outputs: This is dark blue, dark green, and crimson in their respective Minecraft colors
     ```
 
