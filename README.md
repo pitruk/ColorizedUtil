@@ -29,12 +29,12 @@ implementation 'io.github.pitruk:colorizedutil:1.0.0'
 
 ## Usage
 
-Here's a quick example of how to use the `ChatUtil` class from the `ColorizedUtil` library to translate Minecraft color codes and gradients.
+Here's a quick example of how to use the `ColorUtil` class from the `ColorizedUtil` library to translate Minecraft color codes and gradients.
 
 ### Example
 
 ```java
-import pl.pitruk.colorized.ChatUtil;
+import pl.pitruk.colorized.ColorUtil;
 
 public class Example {
     public static void main(String[] args) {
