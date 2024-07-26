@@ -3,14 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>pl.pitruk.colorized</groupId>
-    <artifactId>ColorUtil</artifactId>
+    <groupId>io.github.pitruk</groupId>
+    <artifactId>colorizedutil</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>Colorized Util</name>
     <description>A library for translating Minecraft color codes and gradients.</description>
-    <url>https://github.com/yourusername/ColorizedChat</url>
+    <url>https://github.com/pitruk/ColorizedUtil</url>
 
     <licenses>
         <license>
@@ -20,11 +20,18 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/pitruk/ColorizedChat</url>
-        <connection>scm:git:git://github.com/pitruk/ColorizedChat.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:pitruk/ColorizedChat.git</developerConnection>
+        <url>https://github.com/pitruk/ColorizedUtil</url>
+        <connection>scm:git:git://github.com/pitruk/ColorizedUtil.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:pitruk/ColorizedUtil.git</developerConnection>
     </scm>
 
+    <developers>
+        <developer>
+            <id>pitruk</id>
+            <name>Patryk</name>
+            <email>pitruk99@gmail.com</email>
+        </developer>
+    </developers>
 
     <dependencies>
         <dependency>
@@ -33,4 +40,62 @@
             <version>1.16-R0.4</version>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub pitruk Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/pitruk/ColorizedUtil</url>
+        </repository>
+        <snapshotRepository>
+            <id>github</id>
+            <name>GitHub pitruk Apache Maven Snapshots</name>
+            <url>https://maven.pkg.github.com/pitruk/ColorizedUtil</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.8.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

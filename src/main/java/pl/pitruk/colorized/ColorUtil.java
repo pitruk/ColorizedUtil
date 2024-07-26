@@ -8,12 +8,10 @@ import java.util.regex.Pattern;
 
 public class ColorUtil {
 
-    // Patterny dla HEX, standardowych kolorów i gradientów
     private static final Pattern HEX_PATTERN = Pattern.compile("&#([A-Fa-f0-9]{6})");
     private static final Pattern COLOR_PATTERN = Pattern.compile("&([0-9A-Fa-fk-or])");
     private static final Pattern GRADIENT_PATTERN = Pattern.compile("<gradient:([A-Fa-f0-9]{6}):([A-Fa-f0-9]{6})>(.*?)</gradient>");
 
-    // Funkcja do tłumaczenia tekstu
     public static String colorize(String text) {
         text = translateGradients(text);
         text = translateHexColors(text);
@@ -21,7 +19,6 @@ public class ColorUtil {
         return text;
     }
 
-    // Funkcja do tłumaczenia kolorów HEX
     private static String translateHexColors(String text) {
         Matcher matcher = HEX_PATTERN.matcher(text);
         StringBuffer buffer = new StringBuffer();
@@ -36,7 +33,6 @@ public class ColorUtil {
         return buffer.toString();
     }
 
-    // Funkcja do tłumaczenia standardowych kolorów Minecrafta
     private static String translateColorCodes(String text) {
         Matcher matcher = COLOR_PATTERN.matcher(text);
         StringBuffer buffer = new StringBuffer();
@@ -51,7 +47,6 @@ public class ColorUtil {
         return buffer.toString();
     }
 
-    // Funkcja do tłumaczenia gradientów
     private static String translateGradients(String text) {
         Matcher matcher = GRADIENT_PATTERN.matcher(text);
         StringBuffer buffer = new StringBuffer();
@@ -69,7 +64,6 @@ public class ColorUtil {
         return buffer.toString();
     }
 
-    // Funkcja do stosowania gradientu
     private static String applyGradient(String text, String startHex, String endHex) {
         Color startColor = Color.decode("#" + startHex);
         Color endColor = Color.decode("#" + endHex);
