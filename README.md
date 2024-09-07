@@ -29,17 +29,17 @@ implementation 'io.github.pitruk:colorizedutil:1.0.0'
 
 ## Usage
 
-Here's a quick example of how to use the `ChatUtil` class from the `ColorizedUtil` library to translate Minecraft color codes and gradients.
+Here's a quick example of how to use the `ColorUtil` class from the `ColorizedUtil` library to translate Minecraft color codes and gradients.
 
 ### Example
 
 ```java
-import pl.pitruk.colorized.ChatUtil;
+import pl.pitruk.colorized.ColorUtil;
 
 public class Example {
     public static void main(String[] args) {
         String message = "Hello &#D22AD2world &1and &2everyone&c!";
-        String translatedMessage = ChatUtil.translate(message);
+        String translatedMessage = ColorUtil.colorize(message);
         System.out.println(translatedMessage);
     }
 }
@@ -53,7 +53,7 @@ You can use ColorizedUtil to create colorful and dynamic messages for your Minec
 
     ```java
     String message = "Welcome to the server &#00FF00Green &#FF0000Red &#0000FFBlue!";
-    String translatedMessage = ChatUtil.translate(message);
+    String translatedMessage = ColorUtil.colorize(message);
     // Outputs: Welcome to the server with the words Green, Red, and Blue in their respective colors
     ```
 
@@ -61,7 +61,7 @@ You can use ColorizedUtil to create colorful and dynamic messages for your Minec
 
     ```java
     String message = "This is &1dark blue, &2dark green, and &ccrimson!";
-    String translatedMessage = ChatUtil.translate(message);
+    String translatedMessage = ColorUtil.colorize(message);
     // Outputs: This is dark blue, dark green, and crimson in their respective Minecraft colors
     ```
 
@@ -69,7 +69,7 @@ You can use ColorizedUtil to create colorful and dynamic messages for your Minec
 
     ```java
     String message = "<gradient:FF0000:0000FF>Gradient Text</gradient>";
-    String translatedMessage = ChatUtil.translate(message);
+    String translatedMessage = ColorUtil.colorize(message);
     // Outputs: Gradient Text with a smooth transition from red to blue
     ```
 
